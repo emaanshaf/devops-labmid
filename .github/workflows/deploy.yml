@@ -28,5 +28,10 @@ jobs:
         context: .
         push: true
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/devops-app:latest
-          ${{ secrets.DOCKER_USERNAME }}/devops-app:${{ github.sha }}
+          emaan010/devops-app:latest
+          emaan010/devops-app:${{ github.sha }}
+    
+    - name: Deploy to server (example)
+      run: |
+        echo "Deployment successful!"
+        echo "Image: emaan010/devops-app:latest"
